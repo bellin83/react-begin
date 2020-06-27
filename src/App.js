@@ -1,25 +1,13 @@
 import React from 'react';
 import Hello from './Hello';
-import './App.css';
+import Wrapper from './Wrapper';
 
 function App() {
-  const name = 'react';
-  const style = {
-    backgroundColor: 'black',
-    color: 'aqua',
-    fontSize: 24,
-    padding: '1rem'
-  };
   return (
-    <>
-      {/* 주석이다주석 */}
-      <Hello 
-        // self closing 주석은 이렇게 사용
-      />
-      <div style={style}>{name}</div>
-      {/* css적용 시 class가 아닌 className사용 */}
-      <div className="gray-box"></div>
-    </>
+    <Wrapper>
+      <Hello name="react" color="red" />
+      <Hello color="pink" />
+    </Wrapper>
   );
 }
 
